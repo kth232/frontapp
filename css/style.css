@@ -63,16 +63,18 @@ header nav a {
 } 
 /*header section e*/
 
+
 /*main banner s*/
-.main_banner img {
+.main-banner img {
     width: 100%; /*배너 이미지 가득 채우기*/
 }
 /*main banner e*/
 
+
 /*sub menu s*/
 .sub-menus {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 .sub-menus a {
     width:calc(100% / 3); /*너비 삼등분*/
