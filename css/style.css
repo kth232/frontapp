@@ -262,23 +262,53 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
     z-index: 10;
     padding: 9px 15px;
     display: flex;
-    justify-content: space-between; /*아이콘 좌우 끝 정렬*/
+    justify-content: space-around; /*아이콘 좌우 정렬*/
+}
+.bottom-quick-menu a {
+    width: calc(100% / 5);
+
 }
 .bottom-quick-menu button {
-    width: 26px;
-    height: 30px;
+    width: 60px;
+    height: 40px;
     border: none;
+    background: #fff;
 }
-.bottom-quick-menu .links {
-    display: flex;
-    width: 26px;
+.bottom-quick-menu .icon {
+    height: 30px; /*아이콘 넣을 공간*/
 }
-.bottom-quick-menu .links a {
-    width:0;
+.bottom-quick-menu img{
     height: 30px;
+    cursor: pointer;
+}
+.bottom-quick-menu text {
+    font-size: 0.953rem;
+    color: #2d2f38;
+}
+.bottom-quick-menu a {
+    width:0;
     flex-grow: 1; /*균등분할*/
-    display: block;
+    text-align: center; /*텍스트 가운데 정렬*/
    }
+.bottom-quick-menu button i {
+    font-size: 40px; /*메뉴바 사이즈 조절*/
+}
+.bottom-quick-menu i {
+    font-size: 30px; /*사람아이콘 사이즈 조절*/
+    
+}
+.bottom-quick-menu .icon.pen {
+    background: url("../images/pen.png") no-repeat center center; /*이미지 반복 없앰*/
+    background-size: 30px;
+}
+.bottom-quick-menu .icon.comment {
+    background: url("../images/comment.png") no-repeat center center; /*이미지 반복 없앰*/
+    background-size: 30px;
+}
+.bottom-quick-menu .icon.truck {
+    background: url("../images/truck.png") no-repeat center center; /*이미지 반복 없앰*/
+    background-size: 30px;
+}
 .bottom-quick-links {
     position: fixed;
     bottom: 70px;
