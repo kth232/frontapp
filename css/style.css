@@ -11,7 +11,7 @@
 /*스타일 초기화 s*/
 html {
     font-size:13px; /*13px=1rem*/
-    background: #f8f8f8;
+    background: #E7E7E7;
 }
 body {
     margin: 0 auto; /*상하 여백은 0, 가로 여백은 자동 조절*/
@@ -31,7 +31,14 @@ img {border:0;} /*이미지 경계선 제거*/
 
 /*공통 스타일 s*/
 .montserrat {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+h3 {
+    font-size: 1.538rem; /*20/13(px)=1.538rem*/
+    color: #212121;
+    text-align: center;
+    line-height: 1; /*텍스트 기본 여백 제거*/
+    padding:20px;
 }
 /*공통 스타일 e*/
 
@@ -67,6 +74,7 @@ header nav a {
 /*main banner s*/
 .main-banner img {
     width: 100%; /*배너 이미지 가득 채우기*/
+    display: block; /*이미지는 인라인 레벨이라 기본 여백 있음, 블록 레벨로 바꿔 여백 없앰*/
 }
 /*main banner e*/
 
@@ -75,11 +83,207 @@ header nav a {
 .sub-menus {
     display: flex;
     flex-wrap: wrap;
+    border:10px solid #D8D8D8;
+    border-left:0;
+    border-right:0;
 }
 .sub-menus a {
     width:calc(100% / 3); /*너비 삼등분*/
     text-align: center;
     height: 50px;
-    line-height: 50px;
+    line-height: 50px; /*높이와 동일하게 설정하면 텍스트 중앙 정렬*/
+    font-weight: 500; /*기본이 400, 볼드가 700*/
+    font-size: 1.077rem; /*14/13(px)=1.077rem*/
+    border-top:1px solid #D8D8D8;
+    border-left:1px solid #D8D8D8;
 }
+.sub-menus a:nth-of-type(1), 
+.sub-menus a:nth-of-type(2), 
+.sub-menus a:nth-of-type(3) {border-top:0;} /*가장 위쪽 경계선 제거*/
+
+.sub-menus a:nth-of-type(3n+1) {border-left:0;} /*가장 왼쪽 경계선 제거*/
 /*sub menu e*/
+
+
+/*sub banner s*/
+.sub-banner {
+    display: flex;
+    flex-wrap: wrap; /*영역 벗어나면 다음칸으로 줄개행*/
+    margin-bottom: 20px;
+}
+.sub-banner a:nth-of-type(1) {width:100%;}
+
+.sub-banner a:nth-of-type(2),
+.sub-banner a:nth-of-type(3) {width:50%;}
+
+.sub-banner img {
+    width: 100%;
+    display: block; /*이미지는 인라인 레벨이라 기본 여백 있음, 블록 레벨로 바꿔 여백 없앰*/
+}
+/*sub banner e*/
+
+
+/*products list s*/
+.products ul {
+    display: flex;
+    flex-wrap: wrap; /*영역 벗어나면 다음칸으로 줄개행*/
+    margin: 0 15px;
+}
+.products li {
+    width: calc(100% / 2 - 8px); /*연산자 사이를 띄어써야 적용됨*/
+    margin-bottom:30px; /*이미지 하단에 여백 넣음*/
+}
+.products li:nth-of-type(2n) {margin-left:16px;} /*두번째 칸 사진 왼쪽에 여백 넣음*/
+
+.products .product-image img {
+    width: 100%;
+    display: block; /*인라인 레벨 이미지를 블록 레벨로 바꿔 여백 없앰*/
+    border-radius: 10px;
+}
+.products .product-image {
+    margin-bottom:10px;
+    display: block; /*인라인 레벨 이미지를 블록 레벨로 바꿔 하단에 margin 적용*/
+}
+.products .product-price {
+    font-size:1.154rem; /*15/13(px)=1.154rem*/
+}
+.products .product-price .price {
+    font-weight: 800;
+    font-size: 1.2rem; /*18/13(px)=1.2rem*/
+    letter-spacing: -1px; /*문자 사이 간격 조절(음수면 줄어들고 양수면 늘어남)*/
+}
+.products .product-name {
+    color:#3e3d3c;
+    font-size: 1.154rem;
+    word-break: break-all; /*범위 넘치는 단어 잘라서 줄개행*/
+}
+.products .stars img {height: 11px;}
+.products .no-of-review {
+    color:#a7a7a7;
+    margin-left: 6px;
+    font-size:0.923rem; /*12/13(px)=0.923rem*/
+}
+.products .review-rate {margin: 10px 0 2px;} /*상단 10px, 하단 2px*/
+.products .more-button {
+    font-size: 1.154rem;
+    color:#666;
+    border: 1px solid #b1b1b1;
+    font-weight: bold;
+    background: #fff;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    cursor: pointer; /* 버튼 위로 마우스 커서 올렸을 때 손가락 모양으로 바꿈*/
+}
+/*products list e*/
+
+.bottom-banner {
+    width: 100%;
+    display: block;
+    margin: 10px 0 20px; /*상단 10px, 하단 20px*/
+}
+
+/*footer section s*/
+footer {
+    background: #E7E7E7;
+    padding: 25px 0 80px; /*하단 바 영역 위에 항상 보일 수 있게 띄어줌*/
+    margin-top: 25px;
+}
+footer .logo img {
+    width: 79px;
+    margin: 0 auto 12px;
+    display: block;
+}
+footer .center-phone {
+    border: 2px solid #2a2a2a;
+    border-radius: 20px;
+    height: 35px;
+    line-height: 31px; /*35-2-2=31*/
+    display: block; /*인라인 레벨 a태그를 블록 레벨로 바꿔 상하 크기 조절*/
+    width: 190px;
+    margin: 0 auto 7px;
+    font-size: 1.538rem; /*20/13(px)=1.538rem*/
+    font-weight: 800;
+    text-align: center;
+}
+footer .center-phone img {
+    height: 16px;
+    vertical-align: middle; /*세로정렬*/
+}
+footer .bank-info {
+    font-size: 0.923rem; /*12/13(px)=0.923rem*/
+    color:#2a2a2a;
+    text-align: center;
+}
+footer .bank-info span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+footer .company-info {
+    text-align: center;
+    margin: 3px 0 8px;
+    font-size: 0.923rem;
+    font-weight: 600;
+    color: #878787;
+}
+footer .company-info img {
+    width: 15px;
+    vertical-align: middle; /*셀 내 상하단 가운데 정렬*/
+}
+footer .links {text-align: center;}
+footer .links a {
+    font-size: 0.846rem; /*11/13=0.846rem*/
+    padding: 0 11px;
+    color: #878787;
+    position: relative; 
+}
+footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
+    content: ''; /*가상요소 추가 시 필수 속성*/
+    display: block;
+    width: 1px;
+    height: 8px;
+    background: #878787;
+    position: absolute; /*a태그 내부 오른쪽 끝에 배치*/
+    right: 0;
+    top: 4px;
+}
+/*footer section e*/
+
+
+/*bottom quick menu s*/
+.bottom-quick-menu {
+    position: fixed; /*화면에 고정*/
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 60px;
+    background: #fff; /*배경색 설정 안하면 투명색*/
+    border-top: 1px solid #dfe1e5;
+    z-index: 10;
+    padding: 9px 15px;
+}
+.bottom-quick-menu button {
+    width: 26px;
+    height: 30px;
+}
+.bottom-quick-menu .links {
+    display: flex;
+    width: 26px;
+}
+.bottom-quick-menu .links a {
+    width:0;
+    height: 30px;
+    flex-grow: 1; /*균등분할*/
+   }
+.bottom-quick-links {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    z-index: 10; /*우선순위 설정: 롤링배너보다 앞에 위치하도록*/
+}
+.bottom-quick-links img {
+    display: block;
+    width: 50px;
+    margin-top:10px;
+}
+/*bottom quick menu e*/
