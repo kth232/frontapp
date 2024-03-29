@@ -262,6 +262,7 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
     z-index: 10;
     padding: 9px 15px;
     display: flex;
+    justify-content: space-between; /*아이콘 좌우 끝 정렬*/
 }
 .bottom-quick-menu button {
     width: 26px;
