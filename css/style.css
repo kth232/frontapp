@@ -277,7 +277,7 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
 .bottom-quick-menu .icon {
     height: 30px; /*아이콘 넣을 공간*/
 }
-.bottom-quick-menu img{
+.bottom-quick-menu img {
     height: 30px;
     cursor: pointer;
 }
@@ -321,3 +321,116 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
     margin-top:10px;
 }
 /*bottom quick menu e*/
+
+
+/*login page*/
+/*login header s*/
+.login-header {
+    border-bottom: 1px solid #e7e7e7;
+    width:100%;
+    height: 50px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+.login-header i {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.login-header .text {
+    position: absolute;
+    font-size: 20px;
+    line-height: 49px;
+    color:#000;
+    font-weight: 700;
+}
+/*login header e*/
+
+/*login main s*/
+fieldset {
+    border:none;
+    margin: 0;
+    padding: 0;
+}
+.login-box fieldset legend {
+    font-size: 17px;
+    color: #333;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 19px;
+}
+.login-box {
+    padding: 30px 15px 40px;
+    background: #fff;
+    border-bottom: 1px solid #dfe1e5;
+    margin-bottom: 10px;
+}
+.login-box #loginId, #loginPw {
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    padding: 0 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.login-check input {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    background: url(../images/chk.png) no-repeat center;
+    border: none;
+    background-size: 100%;
+}
+
+.login-box .login-check label {
+    margin-right: 15px;
+    font-size: 12px;
+    color: #212121;
+    cursor: pointer;
+}
+.login-box .submit{
+    margin-top: 25px;
+}
+.login-box .login-btn {
+    width: 100%;
+    display: block;
+    height: 45px;
+    border: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #8769f0;
+    border-radius: 3px;
+    text-align: center;
+}
+.login-find  {
+    text-align: center;
+    padding-top: 15px;
+}
+.login-find a {
+    font-size: 12px; /*11/13=0.846rem*/
+    padding: 0 15px;
+    color: #212121;
+    position: relative; 
+}
+.login-find a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
+    content: ''; /*가상요소 추가 시 필수 속성*/
+    display: block;
+    width: 1px;
+    height: 11px;
+    background: #212121;
+    position: absolute; /*a태그 내부 오른쪽 끝에 배치*/
+    right: 0;
+    top: 4px;
+}
+/*login main s*/
+
+/*sns login s*/
+
+/*sns login e*/
