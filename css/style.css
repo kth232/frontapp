@@ -433,7 +433,7 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
 }
 /*login main s*/
 
-/*sns login section s*/
+/*sns login s*/
 .sns {
     background-color: #ffffff;
     padding: 30px 15px 45px;
@@ -471,10 +471,10 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
     background: #F5E610 url("../images/kakao_login.png") no-repeat center center;
     background-size: contain;
 }
-/*sns login section e*/
+/*sns login e*/
 
 
-/*guest order section s*/
+/*guest order s*/
 .guest-order {
     background-color: #ffffff;
     padding: 30px 15px 45px;
@@ -522,4 +522,4 @@ footer .links a:not(.last)::after { /*last만 제외하고 가상요소 추가*/
     background-color: #ffffff;
     color: #8769f0;
 }
-/*guest order section e*/
+/*guest order e*/
